@@ -1,0 +1,15 @@
+As informações sobre animais de estimação são mantidas em duas tabelas separadas:
+
+TABLE dogs
+  id INTEGER NOT NULL PRIMARY KEY,
+  name VARCHAR(50) NOT NULL
+
+TABLE cats
+  id INTEGER NOT NULL PRIMARY KEY,
+  name VARCHAR(50) NOT NULL
+
+
+Escreva uma consulta que selecione todos os nomes de animais distintos.
+
+
+select name from dogs D FULL OUTER JOIN cats C ON D.Value = C.Value WHERE D.Value IS NULL OR C.Value IS NULL
